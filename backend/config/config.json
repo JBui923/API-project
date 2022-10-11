@@ -1,0 +1,7 @@
+{
+    "production": {
+        "define": {
+          "schema": "apitest"
+        }
+      }
+}

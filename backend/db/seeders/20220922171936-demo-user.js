@@ -1,6 +1,11 @@
 'use strict';
 const bcrypt = require("bcryptjs");
 
+let options = {};
+if (process.env.NODE_ENV === 'production') {
+  options.schema = 'apitest';  // define your schema in options object
+}
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('Users', [
