@@ -7,11 +7,11 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.addColumn('Users', 'firstName', {
+    await queryInterface.addColumn('apitest.Users', 'firstName', {
       type: Sequelize.STRING(30),
       allowNull: false,
     }, options)
-    await queryInterface.addColumn('Users', 'lastName', {
+    await queryInterface.addColumn('apitest.Users', 'lastName', {
       type: Sequelize.STRING(30),
       allowNull: false,
     }, options)
