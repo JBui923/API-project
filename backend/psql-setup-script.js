@@ -1,4 +1,4 @@
-const { sequelize } = require('./models');
+const { sequelize } = require('./db/models');
 
 const schemaName = 'apitest'; // replace with your schema name
 
