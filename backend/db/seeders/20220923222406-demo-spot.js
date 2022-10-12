@@ -7,7 +7,8 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-   await queryInterface.bulkInsert('Spots', [
+    options.tableName='Spots';
+   await queryInterface.bulkInsert(options, [
     {
       ownerId: 1,
       address: "123 Main Street",
@@ -109,8 +110,9 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
+    options.tableName='Spots';
      const Op = Sequelize.Op;
-     await queryInterface.bulkDelete('Spots', {
+     await queryInterface.bulkDelete(options, {
       country: { [Op.in]: ["United States of America", "United Kingdom", "Westeros"] }
      }, {});
   }
